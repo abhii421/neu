@@ -1,0 +1,9 @@
+void main(){
+  int sum = 0;
+  List<int> myList = [1,4,5,7,8,36];
+  
+  myList.forEach((number){
+    sum = sum+number;
+  });
+  print(sum);
+}
