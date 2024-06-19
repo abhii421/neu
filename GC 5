@@ -1,0 +1,37 @@
+void main(){
+  
+  int max = 0;
+  List<int> Length = [];
+  String str = 'This is my apple.';
+  
+  if(str.endsWith('.') || str.endsWith('?') || str.endsWith('!'))
+  {
+    //do nothing
+  }  
+  else{
+    //if there is no fullstop/punctutation, add a whitespace which 
+    //will mark the end of the last word
+    //hence, the last word's letters will be counted and added to the list
+    str = str+' ';
+    print(str);
+  }
+  
+  
+  for(int i = 0;i<str.length;i++){
+    if(str[i] == ' ' || str[i] == '!' || str[i] == '?' || str[i] == '.')
+    {
+      Length.add(max);
+      max = 0;
+      print(Length);
+    }
+    else {max++;}
+  }
+  
+   int maximumLetter = 1;
+  for(int q = 0;q<Length.length;q++){
+    if(Length[q]>maximumLetter){
+      maximumLetter = Length[q];
+    }
+  }
+  print(maximumLetter);
+}
